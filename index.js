@@ -39,7 +39,7 @@ const resolvers={
             return db.reviews.filter((data)=>data.author_id===parent.id)
         }
     },
-    Review:{
+    Review:{ //mutiple querying
         game(parent){
             return db.games.find((data)=>data.id===parent.game_id)
         },
