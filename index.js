@@ -28,6 +28,25 @@ const resolvers={
             return db.authors.find((author)=>author.id===arg.id)
          }
         
+    },
+    Game:{
+        reviews(parent){
+            return db.reviews.filter((data)=>data.game_id===parent.id)
+        }
+    },
+    Author:{
+        reviews(parent){
+            return db.reviews.filter((data)=>data.author_id===parent.id)
+        }
+    },
+    Review:{
+        game(parent){
+            return db.games.find((data)=>data.id===parent.game_id)
+        },
+        author(parent){
+            return db.authors.find((data)=>data.id===parent.author_id)
+        }
+
     }
 }
 
