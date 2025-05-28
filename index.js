@@ -47,6 +47,35 @@ const resolvers={
             return db.authors.find((data)=>data.id===parent.author_id)
         }
 
+    },
+    Mutation:{
+        deleteGame(_,arg){
+            db.games=db.games.filter((data)=>data.id!=arg.id)
+            return db.games
+        },
+        addGame(_,arg){
+            let game={
+                ...arg.game,
+                id:Math.floor(Math.random()* 1000).toString()
+            }
+            db.games.push(game)
+            return game
+        },
+        updateGame(_,arg){
+         db.games= db.games.map((g)=>{
+                if(g.id===arg.id){
+                    return {...g,...arg.edits}
+                }
+                return g
+            }
+            
+          
+            
+        )
+        let data=db.games.find((g)=>g.id===arg.id)
+        console.log(data)
+        return data
+        }
     }
 }
 
