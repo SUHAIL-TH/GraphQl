@@ -47,7 +47,7 @@ const resolvers={
             return db.authors.find((data)=>data.id===parent.author_id)
         }
     },
-
+    //this is for perfoming the mutaion thing like crud operation functionalities
     Mutation:{
         deleteGame(_,arg){
             db.games=db.games.filter((data)=>data.id!=arg.id)
@@ -79,7 +79,6 @@ const resolvers={
             } 
         )
         let data=db.games.find((g)=>g.id===arg.id)
-       
         return data
         }
     }
