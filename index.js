@@ -79,7 +79,7 @@ const resolvers={
             } 
         )
         let data=db.games.find((g)=>g.id===arg.id)
-        console.log(data)
+       
         return data
         }
     }
