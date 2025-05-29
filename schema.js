@@ -29,11 +29,14 @@ export const typeDefs=`#graphql
         author(id:ID!):Author
     }
 
+    # this is for mutation mean for perfoming operation like crud
     type Mutation {
         addGame(game:addGameInput!):Game
+        addAuthor(author:addAuthorInput!):Author
         deleteGame(id:ID!):[Game],
         updateGame(id:ID, edits:EditGameInput!):Game
     }
+
     input addGameInput {
         title:String!
         platform:[String!]!
@@ -42,5 +45,9 @@ export const typeDefs=`#graphql
         title:String!,
         platform:[String!]  
 
+    }
+    input addAuthorInput {
+        name:String!
+        verified:Boolean!
     }
 `

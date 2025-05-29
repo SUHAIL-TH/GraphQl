@@ -46,8 +46,8 @@ const resolvers={
         author(parent){
             return db.authors.find((data)=>data.id===parent.author_id)
         }
-
     },
+
     Mutation:{
         deleteGame(_,arg){
             db.games=db.games.filter((data)=>data.id!=arg.id)
@@ -61,16 +61,22 @@ const resolvers={
             db.games.push(game)
             return game
         },
+        addAuthor(_,arg){
+            let author={
+                ...arg.author,
+            id:Math.floor(Math.random()*100).toString()
+
+            }
+            db.authors.push(author)
+            return author
+        },
         updateGame(_,arg){
          db.games= db.games.map((g)=>{
                 if(g.id===arg.id){
                     return {...g,...arg.edits}
                 }
                 return g
-            }
-            
-          
-            
+            } 
         )
         let data=db.games.find((g)=>g.id===arg.id)
         console.log(data)
@@ -84,7 +90,7 @@ const resolvers={
 const server=new ApolloServer({
     //typeDefs --it says the defintion of types of data
     typeDefs,
-    //resolvers 
+    //resolvers -here we write the logic for this 
     resolvers
 })
 
