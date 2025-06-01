@@ -1,3 +1,4 @@
+// this is temperory database to get all the data
 let games = [
   {id: '1', title: 'Zelda, Tears of the Kingdom', platform: ['Switch']},
   {id: '2', title: 'Final Fantasy 7 Remake', platform: ['PS5', 'Xbox']},
