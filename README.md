@@ -1,5 +1,6 @@
 This repository demonstrates how to implement GraphQL in a Node.js application using Apollo Server. It covers the fundamentals of setting up a GraphQL server, defining schemas, resolvers
 
+//preparation for interview of graphql
 Questions?
 
 Beginner-Level Questions
