@@ -5,7 +5,7 @@ import { typeDefs } from "./schema.js";
 //import db for data
 import db from "./_db.js"
 
-//resolvers
+//resolvers #this contain the code for the resolver funtion
 
 const resolvers={
     Query :{
