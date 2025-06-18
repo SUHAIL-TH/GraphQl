@@ -17,7 +17,8 @@ const resolvers={
         },
         authors(){
             return db.authors
-        },       
+        },  
+        //return  a  specific reivew on the base of an id      
         review(_,arg){
             return db.reviews.find((review)=>review.id===arg.id)
         },
