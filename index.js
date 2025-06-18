@@ -40,6 +40,7 @@ const resolvers={
             return db.reviews.filter((data)=>data.author_id===parent.id)
         }
     },
+    //this is used for  mutiple querying 
     Review:{ //mutiple querying
         game(parent){
             return db.games.find((data)=>data.id===parent.game_id)
