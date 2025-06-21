@@ -12,7 +12,7 @@ let authors = [
   {id: '2', name: 'yoshi', verified: false},
   {id: '3', name: 'peach', verified: true},
 ]
-//reviews db databse
+
 let reviews = [
   {id: '1', rating: 9, content: 'lorem ipsum', author_id: '1', game_id: '2'},
   {id: '2', rating: 10, content: 'lorem ipsum', author_id: '2', game_id: '1'},
