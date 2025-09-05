@@ -5,10 +5,11 @@ This repository demonstrates how to implement GraphQL in a Node.js application u
 
 
 
-//preparation for interview of graphql
-Questions?
+########  preparation for interview of graphql
 
-Beginner-Level Questions
+Questions?   
+
+#Beginner-Level Questions
 These test basic understanding and core concepts.
 
 What is GraphQL? How is it different from REST?
